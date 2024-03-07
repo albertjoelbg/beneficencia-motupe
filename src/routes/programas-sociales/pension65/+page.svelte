@@ -1,0 +1,1 @@
+<h2 class="text-2xl font-semibold text-center p-4">Pensión 65</h2>
