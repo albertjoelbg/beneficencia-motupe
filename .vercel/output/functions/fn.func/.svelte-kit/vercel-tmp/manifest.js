@@ -10,7 +10,7 @@ return {
 	assets: new Set(["favicon.png"]),
 	mimeTypes: {".png":"image/png",".jpg":"image/jpeg"},
 	_: {
-		client: {"start":"_app/immutable/entry/start.Pg3C9CZq.js","app":"_app/immutable/entry/app.CoI9StQn.js","imports":["_app/immutable/entry/start.Pg3C9CZq.js","_app/immutable/chunks/entry.D7Kdx9Ad.js","_app/immutable/chunks/scheduler.CiQcZxFi.js","_app/immutable/chunks/index.mJN51mbs.js","_app/immutable/entry/app.CoI9StQn.js","_app/immutable/chunks/scheduler.CiQcZxFi.js","_app/immutable/chunks/index.DBFcScdj.js"],"stylesheets":[],"fonts":[],"uses_env_dynamic_public":false},
+		client: {"start":"_app/immutable/entry/start.CHuL1WfL.js","app":"_app/immutable/entry/app.Dtww8VLs.js","imports":["_app/immutable/entry/start.CHuL1WfL.js","_app/immutable/chunks/entry.CrgU_Wvo.js","_app/immutable/chunks/scheduler.CM8gWTHg.js","_app/immutable/chunks/index.CIW4ENOb.js","_app/immutable/entry/app.Dtww8VLs.js","_app/immutable/chunks/scheduler.CM8gWTHg.js","_app/immutable/chunks/index.0sI8AnVS.js"],"stylesheets":[],"fonts":[],"uses_env_dynamic_public":false},
 		nodes: [
 			__memo(() => import('../output/server/nodes/0.js')),
 			__memo(() => import('../output/server/nodes/1.js')),
@@ -21,96 +21,63 @@ return {
 			__memo(() => import('../output/server/nodes/6.js')),
 			__memo(() => import('../output/server/nodes/7.js')),
 			__memo(() => import('../output/server/nodes/8.js')),
-			__memo(() => import('../output/server/nodes/9.js')),
-			__memo(() => import('../output/server/nodes/10.js')),
-			__memo(() => import('../output/server/nodes/11.js')),
-			__memo(() => import('../output/server/nodes/12.js')),
-			__memo(() => import('../output/server/nodes/13.js')),
-			__memo(() => import('../output/server/nodes/14.js'))
+			__memo(() => import('../output/server/nodes/9.js'))
 		],
 		routes: [
 			{
 				id: "/",
 				pattern: /^\/$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 3 },
-				endpoint: null
-			},
-			{
-				id: "/ayuda",
-				pattern: /^\/ayuda\/?$/,
-				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 4 },
-				endpoint: null
-			},
-			{
-				id: "/beneficencia",
-				pattern: /^\/beneficencia\/?$/,
-				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 5 },
+				page: { layouts: [0,], errors: [1,], leaf: 2 },
 				endpoint: null
 			},
 			{
 				id: "/contacto",
 				pattern: /^\/contacto\/?$/,
 				params: [],
+				page: { layouts: [0,], errors: [1,], leaf: 3 },
+				endpoint: null
+			},
+			{
+				id: "/nosotros/historia",
+				pattern: /^\/nosotros\/historia\/?$/,
+				params: [],
+				page: { layouts: [0,], errors: [1,], leaf: 4 },
+				endpoint: null
+			},
+			{
+				id: "/nosotros/mision-vision",
+				pattern: /^\/nosotros\/mision-vision\/?$/,
+				params: [],
+				page: { layouts: [0,], errors: [1,], leaf: 5 },
+				endpoint: null
+			},
+			{
+				id: "/nosotros/organigrama",
+				pattern: /^\/nosotros\/organigrama\/?$/,
+				params: [],
 				page: { layouts: [0,], errors: [1,], leaf: 6 },
-				endpoint: null
-			},
-			{
-				id: "/mesa-de-partes",
-				pattern: /^\/mesa-de-partes\/?$/,
-				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 7 },
-				endpoint: null
-			},
-			{
-				id: "/nosotros",
-				pattern: /^\/nosotros\/?$/,
-				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 8 },
 				endpoint: null
 			},
 			{
 				id: "/noticias",
 				pattern: /^\/noticias\/?$/,
 				params: [],
+				page: { layouts: [0,], errors: [1,], leaf: 7 },
+				endpoint: null
+			},
+			{
+				id: "/programas-sociales/comedor-social",
+				pattern: /^\/programas-sociales\/comedor-social\/?$/,
+				params: [],
+				page: { layouts: [0,], errors: [1,], leaf: 8 },
+				endpoint: null
+			},
+			{
+				id: "/servicios/cementerio",
+				pattern: /^\/servicios\/cementerio\/?$/,
+				params: [],
 				page: { layouts: [0,], errors: [1,], leaf: 9 },
-				endpoint: null
-			},
-			{
-				id: "/patrimonio-cultural",
-				pattern: /^\/patrimonio-cultural\/?$/,
-				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 10 },
-				endpoint: null
-			},
-			{
-				id: "/programas-sociales/beca18",
-				pattern: /^\/programas-sociales\/beca18\/?$/,
-				params: [],
-				page: { layouts: [0,2,], errors: [1,,], leaf: 11 },
-				endpoint: null
-			},
-			{
-				id: "/programas-sociales/bonos",
-				pattern: /^\/programas-sociales\/bonos\/?$/,
-				params: [],
-				page: { layouts: [0,2,], errors: [1,,], leaf: 12 },
-				endpoint: null
-			},
-			{
-				id: "/programas-sociales/pension65",
-				pattern: /^\/programas-sociales\/pension65\/?$/,
-				params: [],
-				page: { layouts: [0,2,], errors: [1,,], leaf: 13 },
-				endpoint: null
-			},
-			{
-				id: "/programas-sociales/vaso-de-leche",
-				pattern: /^\/programas-sociales\/vaso-de-leche\/?$/,
-				params: [],
-				page: { layouts: [0,2,], errors: [1,,], leaf: 14 },
 				endpoint: null
 			}
 		],

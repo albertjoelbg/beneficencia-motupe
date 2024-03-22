@@ -1,6 +1,6 @@
-import { c as create_ssr_component, a as compute_rest_props, b as spread, e as escape_attribute_value, d as escape_object, f as escape, g as getContext, h as add_attribute, v as validate_component, i as compute_slots, s as setContext, j as createEventDispatcher, k as subscribe } from "../../chunks/ssr.js";
-import { t as twMerge, i as is_void, a as twJoin } from "../../chunks/bundle-mjs.js";
-import { I as Indicator, F as Frame, B as Button } from "../../chunks/Button.js";
+import { c as create_ssr_component, a as compute_rest_props, b as spread, e as escape_attribute_value, d as escape_object, f as escape, g as getContext, h as add_attribute, v as validate_component, i as compute_slots, j as createEventDispatcher, s as setContext, k as subscribe } from "../../chunks/ssr.js";
+import { t as twMerge, i as is_void, a as twJoin, F as Frame } from "../../chunks/Frame.js";
+import { I as Indicator } from "../../chunks/Indicator.js";
 import { w as writable } from "../../chunks/index.js";
 const logo = "/_app/immutable/assets/logobeneficencia.C3ORp6_t.jpg";
 const ChevronDown = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -32,36 +32,6 @@ const ChevronDown = create_ssr_component(($$result, $$props, $$bindings, slots) 
     ],
     {}
   )}>${title ? `<title>${escape(title)}</title>` : ``}<path d="M16 22L6 12 7.4 10.6 16 19.2 24.6 10.6 26 12z"></path></svg>`;
-});
-const Home = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let labelled;
-  let attributes;
-  let $$restProps = compute_rest_props($$props, ["size", "title"]);
-  let { size = 16 } = $$props;
-  let { title = void 0 } = $$props;
-  if ($$props.size === void 0 && $$bindings.size && size !== void 0)
-    $$bindings.size(size);
-  if ($$props.title === void 0 && $$bindings.title && title !== void 0)
-    $$bindings.title(title);
-  labelled = $$props["aria-label"] || $$props["aria-labelledby"] || title;
-  attributes = {
-    "aria-hidden": labelled ? void 0 : true,
-    role: labelled ? "img" : void 0,
-    focusable: Number($$props["tabindex"]) === 0 ? true : void 0
-  };
-  return `<svg${spread(
-    [
-      { xmlns: "http://www.w3.org/2000/svg" },
-      { viewBox: "0 0 32 32" },
-      { fill: "currentColor" },
-      { preserveAspectRatio: "xMidYMid meet" },
-      { width: escape_attribute_value(size) },
-      { height: escape_attribute_value(size) },
-      escape_object(attributes),
-      escape_object($$restProps)
-    ],
-    {}
-  )}>${title ? `<title>${escape(title)}</title>` : ``}<path d="M16.6123,2.2138a1.01,1.01,0,0,0-1.2427,0L1,13.4194l1.2427,1.5717L4,13.6209V26a2.0041,2.0041,0,0,0,2,2H26a2.0037,2.0037,0,0,0,2-2V13.63L29.7573,15,31,13.4282ZM18,26H14V18h4Zm2,0V18a2.0023,2.0023,0,0,0-2-2H14a2.002,2.002,0,0,0-2,2v8H6V12.0615l10-7.79,10,7.8005V26Z"></path></svg>`;
 });
 const LogoFacebook = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let labelled;
@@ -298,26 +268,6 @@ const Avatar = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     ],
     {}
   )}>`} `;
-});
-const ButtonGroup = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let $$restProps = compute_rest_props($$props, ["size", "divClass"]);
-  let { size = "md" } = $$props;
-  let { divClass = "inline-flex rounded-lg shadow-sm" } = $$props;
-  setContext("group", { size });
-  if ($$props.size === void 0 && $$bindings.size && size !== void 0)
-    $$bindings.size(size);
-  if ($$props.divClass === void 0 && $$bindings.divClass && divClass !== void 0)
-    $$bindings.divClass(divClass);
-  return `<div${spread(
-    [
-      escape_object($$restProps),
-      {
-        class: escape_attribute_value(twMerge(divClass, $$props.class))
-      },
-      { role: "group" }
-    ],
-    {}
-  )}>${slots.default ? slots.default({}) : ``}</div> `;
 });
 const min = Math.min;
 const max = Math.max;
@@ -905,8 +855,8 @@ function isTableElement(element) {
 }
 function isContainingBlock(element) {
   const webkit = isWebKit();
-  const css = getComputedStyle(element);
-  return css.transform !== "none" || css.perspective !== "none" || (css.containerType ? css.containerType !== "normal" : false) || !webkit && (css.backdropFilter ? css.backdropFilter !== "none" : false) || !webkit && (css.filter ? css.filter !== "none" : false) || ["transform", "perspective", "filter"].some((value) => (css.willChange || "").includes(value)) || ["paint", "layout", "strict", "content"].some((value) => (css.contain || "").includes(value));
+  const css2 = getComputedStyle(element);
+  return css2.transform !== "none" || css2.perspective !== "none" || (css2.containerType ? css2.containerType !== "normal" : false) || !webkit && (css2.backdropFilter ? css2.backdropFilter !== "none" : false) || !webkit && (css2.filter ? css2.filter !== "none" : false) || ["transform", "perspective", "filter"].some((value) => (css2.willChange || "").includes(value)) || ["paint", "layout", "strict", "content"].some((value) => (css2.contain || "").includes(value));
 }
 function getContainingBlock(element) {
   let currentNode = getParentNode(element);
@@ -982,9 +932,9 @@ function getOverflowAncestors(node, list, traverseIframes) {
   return list.concat(scrollableAncestor, getOverflowAncestors(scrollableAncestor, [], traverseIframes));
 }
 function getCssDimensions(element) {
-  const css = getComputedStyle(element);
-  let width = parseFloat(css.width) || 0;
-  let height = parseFloat(css.height) || 0;
+  const css2 = getComputedStyle(element);
+  let width = parseFloat(css2.width) || 0;
+  let height = parseFloat(css2.height) || 0;
   const hasOffset = isHTMLElement(element);
   const offsetWidth = hasOffset ? element.offsetWidth : width;
   const offsetHeight = hasOffset ? element.offsetHeight : height;
@@ -1078,9 +1028,9 @@ function getBoundingClientRect(element, includeScale, isFixedStrategy, offsetPar
     while (currentIFrame && offsetParent && offsetWin !== currentWin) {
       const iframeScale = getScale(currentIFrame);
       const iframeRect = currentIFrame.getBoundingClientRect();
-      const css = getComputedStyle(currentIFrame);
-      const left = iframeRect.left + (currentIFrame.clientLeft + parseFloat(css.paddingLeft)) * iframeScale.x;
-      const top = iframeRect.top + (currentIFrame.clientTop + parseFloat(css.paddingTop)) * iframeScale.y;
+      const css2 = getComputedStyle(currentIFrame);
+      const left = iframeRect.left + (currentIFrame.clientLeft + parseFloat(css2.paddingLeft)) * iframeScale.x;
+      const top = iframeRect.top + (currentIFrame.clientTop + parseFloat(css2.paddingTop)) * iframeScale.y;
       x *= iframeScale.x;
       y *= iframeScale.y;
       width *= iframeScale.x;
@@ -2178,146 +2128,203 @@ const NavUl = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     {}
   )}><ul${add_attribute("class", _ulClass, 0)}>${slots.default ? slots.default({}) : ``}</ul></div>`} `;
 });
+const css = {
+  code: ".tipografia-manrope.svelte-1eyzc30{font-family:'Manrope Variable', sans-serif}",
+  map: null
+};
+const TextMenu = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let { texto } = $$props;
+  if ($$props.texto === void 0 && $$bindings.texto && texto !== void 0)
+    $$bindings.texto(texto);
+  $$result.css.add(css);
+  return `<span class="text-primary-700 tipografia-manrope hover:text-secondary-400 svelte-1eyzc30">${escape(texto)} </span>`;
+});
 const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `${validate_component(Navbar, "Navbar").$$render($$result, { rounded: true, class: "bg-primary-100" }, {}, {
-    default: () => {
-      return `${validate_component(NavBrand, "NavBrand").$$render($$result, { href: "/" }, {}, {
-        default: () => {
-          return `<div class="flex space-x-4 rtl:space-x-reverse">${validate_component(Avatar, "Avatar").$$render(
-            $$result,
-            {
-              src: logo,
-              alt: "Logo de la Beneficencia de Motupe",
-              size: "xl"
-            },
-            {},
-            {}
-          )}</div>`;
-        }
-      })} ${validate_component(ButtonGroup, "ButtonGroup").$$render($$result, {}, {}, {
-        default: () => {
-          return `${validate_component(Button, "Button").$$render($$result, { href: "/", color: "red" }, {}, {
-            default: () => {
-              return `${validate_component(Home, "Home").$$render($$result, {}, {}, {})}`;
-            }
-          })} ${validate_component(Button, "Button").$$render(
-            $$result,
-            {
-              href: "/beneficencia",
-              outline: true,
-              color: "primary"
-            },
-            {},
-            {
+  return `${validate_component(Navbar, "Navbar").$$render(
+    $$result,
+    {
+      rounded: true,
+      class: "z-20 flex place-content-center bg-primary-50"
+    },
+    {},
+    {
+      default: () => {
+        return `${validate_component(NavBrand, "NavBrand").$$render($$result, { class: "ml-4", href: "/" }, {}, {
+          default: () => {
+            return `<div class="rtl:space-x-reverse">${validate_component(Avatar, "Avatar").$$render(
+              $$result,
+              {
+                src: logo,
+                alt: "Logo de la Beneficencia de Motupe",
+                size: "xl"
+              },
+              {},
+              {}
+            )}</div>`;
+          }
+        })} ${validate_component(NavHamburger, "NavHamburger").$$render($$result, {}, {}, {})} ${validate_component(NavUl, "NavUl").$$render($$result, { class: "rounded-2xl" }, {}, {
+          default: () => {
+            return `${validate_component(NavLi, "NavLi").$$render($$result, { class: "font-medium text-xl", href: "/" }, {}, {
               default: () => {
-                return `Beneficencia`;
+                return `${validate_component(TextMenu, "TextMenu").$$render($$result, { texto: "Inicio" }, {}, {})}`;
               }
-            }
-          )} ${validate_component(Button, "Button").$$render(
-            $$result,
-            {
-              href: "/mesa-de-partes",
-              outline: true,
-              color: "primary"
-            },
-            {},
-            {
+            })} ${validate_component(NavLi, "NavLi").$$render(
+              $$result,
+              {
+                class: "cursor-pointer font-medium text-xl"
+              },
+              {},
+              {
+                default: () => {
+                  return `${validate_component(TextMenu, "TextMenu").$$render($$result, { texto: "Nosotros" }, {}, {})} ${validate_component(ChevronDown, "ChevronDown").$$render(
+                    $$result,
+                    {
+                      class: "w-3 h-3 ms-2 text-primary-800 dark:text-white inline"
+                    },
+                    {},
+                    {}
+                  )}`;
+                }
+              }
+            )} ${validate_component(Dropdown, "Dropdown").$$render($$result, { class: "w-50 z-20" }, {}, {
               default: () => {
-                return `Mesa de Partes`;
-              }
-            }
-          )}`;
-        }
-      })} ${validate_component(NavHamburger, "NavHamburger").$$render($$result, {}, {}, {})} ${validate_component(NavUl, "NavUl").$$render($$result, { class: "rounded-2xl" }, {}, {
-        default: () => {
-          return `${validate_component(NavLi, "NavLi").$$render($$result, { class: "cursor-pointer" }, {}, {
-            default: () => {
-              return `Programas Sociales
-            ${validate_component(ChevronDown, "ChevronDown").$$render(
-                $$result,
-                {
-                  class: "w-3 h-3 ms-2 text-primary-800 dark:text-white inline"
-                },
-                {},
-                {}
-              )}`;
-            }
-          })} ${validate_component(Dropdown, "Dropdown").$$render($$result, { class: "w-44 z-20" }, {}, {
-            default: () => {
-              return `${validate_component(DropdownItem, "DropdownItem").$$render(
-                $$result,
-                {
-                  href: "/programas-sociales/vaso-de-leche"
-                },
-                {},
-                {
-                  default: () => {
-                    return `Vaso de leche`;
+                return `${validate_component(DropdownItem, "DropdownItem").$$render(
+                  $$result,
+                  {
+                    class: "text-xl text-black",
+                    href: "/nosotros/historia"
+                  },
+                  {},
+                  {
+                    default: () => {
+                      return `Historia`;
+                    }
                   }
-                }
-              )} ${validate_component(DropdownDivider, "DropdownDivider").$$render($$result, {}, {}, {})} ${validate_component(DropdownItem, "DropdownItem").$$render($$result, { href: "/programas-sociales/pension65" }, {}, {
+                )} ${validate_component(DropdownDivider, "DropdownDivider").$$render($$result, {}, {}, {})} ${validate_component(DropdownItem, "DropdownItem").$$render(
+                  $$result,
+                  {
+                    class: "text-xl text-black",
+                    href: "/nosotros/mision-vision"
+                  },
+                  {},
+                  {
+                    default: () => {
+                      return `Misión y Visión`;
+                    }
+                  }
+                )} ${validate_component(DropdownDivider, "DropdownDivider").$$render($$result, {}, {}, {})} ${validate_component(DropdownItem, "DropdownItem").$$render(
+                  $$result,
+                  {
+                    class: "text-xl text-black",
+                    href: "/nosotros/organigrama"
+                  },
+                  {},
+                  {
+                    default: () => {
+                      return `Organigrama`;
+                    }
+                  }
+                )} ${validate_component(DropdownDivider, "DropdownDivider").$$render($$result, {}, {}, {})}`;
+              }
+            })} ${validate_component(NavLi, "NavLi").$$render(
+              $$result,
+              {
+                class: "cursor-pointer font-medium text-xl"
+              },
+              {},
+              {
                 default: () => {
-                  return `Pensión 65`;
+                  return `${validate_component(TextMenu, "TextMenu").$$render($$result, { texto: "Programas Sociales" }, {}, {})} ${validate_component(ChevronDown, "ChevronDown").$$render(
+                    $$result,
+                    {
+                      class: "w-3 h-3 ms-2 text-primary-800 dark:text-white inline"
+                    },
+                    {},
+                    {}
+                  )}`;
                 }
-              })} ${validate_component(DropdownDivider, "DropdownDivider").$$render($$result, {}, {}, {})} ${validate_component(DropdownItem, "DropdownItem").$$render($$result, { href: "/programas-sociales/beca18" }, {}, {
+              }
+            )} ${validate_component(Dropdown, "Dropdown").$$render($$result, { class: "w-50 z-20" }, {}, {
+              default: () => {
+                return `${validate_component(DropdownItem, "DropdownItem").$$render(
+                  $$result,
+                  {
+                    class: "text-xl text-black",
+                    href: "/programas-sociales/comedor-social"
+                  },
+                  {},
+                  {
+                    default: () => {
+                      return `Comedor
+                Social`;
+                    }
+                  }
+                )} ${validate_component(DropdownDivider, "DropdownDivider").$$render($$result, {}, {}, {})}`;
+              }
+            })} ${validate_component(NavLi, "NavLi").$$render(
+              $$result,
+              {
+                class: "cursor-pointer font-medium text-xl"
+              },
+              {},
+              {
                 default: () => {
-                  return `Beca 18`;
+                  return `${validate_component(TextMenu, "TextMenu").$$render($$result, { texto: "Servicios" }, {}, {})} ${validate_component(ChevronDown, "ChevronDown").$$render(
+                    $$result,
+                    {
+                      class: "w-3 h-3 ms-2 text-primary-800 dark:text-white inline"
+                    },
+                    {},
+                    {}
+                  )}`;
                 }
-              })} ${validate_component(DropdownDivider, "DropdownDivider").$$render($$result, {}, {}, {})} ${validate_component(DropdownItem, "DropdownItem").$$render($$result, { href: "/programas-sociales/bonos" }, {}, {
+              }
+            )} ${validate_component(Dropdown, "Dropdown").$$render($$result, { class: "w-50 z-20" }, {}, {
+              default: () => {
+                return `${validate_component(DropdownItem, "DropdownItem").$$render(
+                  $$result,
+                  {
+                    class: "text-xl text-black",
+                    href: "/servicios/cementerio"
+                  },
+                  {},
+                  {
+                    default: () => {
+                      return `Cementerio`;
+                    }
+                  }
+                )} ${validate_component(DropdownDivider, "DropdownDivider").$$render($$result, {}, {}, {})}`;
+              }
+            })} ${validate_component(NavLi, "NavLi").$$render(
+              $$result,
+              {
+                class: "font-medium text-xl",
+                href: "/noticias"
+              },
+              {},
+              {
                 default: () => {
-                  return `Bonos`;
+                  return `${validate_component(TextMenu, "TextMenu").$$render($$result, { texto: "Noticias" }, {}, {})}`;
                 }
-              })}`;
-            }
-          })} ${validate_component(NavLi, "NavLi").$$render($$result, { class: "cursor-pointer" }, {}, {
-            default: () => {
-              return `Patrimonio Cultural
-            ${validate_component(ChevronDown, "ChevronDown").$$render(
-                $$result,
-                {
-                  class: "w-3 h-3 ms-2 text-primary-800 dark:text-white inline"
-                },
-                {},
-                {}
-              )}`;
-            }
-          })} ${validate_component(Dropdown, "Dropdown").$$render($$result, { class: "w-44 z-20" }, {}, {
-            default: () => {
-              return `${validate_component(DropdownItem, "DropdownItem").$$render($$result, {}, {}, {
+              }
+            )} ${validate_component(NavLi, "NavLi").$$render(
+              $$result,
+              {
+                class: "font-medium text-xl",
+                href: "/contacto"
+              },
+              {},
+              {
                 default: () => {
-                  return `Cerro Cruz de Chalpón`;
+                  return `${validate_component(TextMenu, "TextMenu").$$render($$result, { texto: "Contacto" }, {}, {})}`;
                 }
-              })} ${validate_component(DropdownDivider, "DropdownDivider").$$render($$result, {}, {}, {})} ${validate_component(DropdownItem, "DropdownItem").$$render($$result, {}, {}, {
-                default: () => {
-                  return `Jaguey Negro`;
-                }
-              })} ${validate_component(DropdownDivider, "DropdownDivider").$$render($$result, {}, {}, {})} ${validate_component(DropdownItem, "DropdownItem").$$render($$result, {}, {}, {
-                default: () => {
-                  return `Cerro de la Vieja`;
-                }
-              })} ${validate_component(DropdownDivider, "DropdownDivider").$$render($$result, {}, {}, {})} ${validate_component(DropdownItem, "DropdownItem").$$render($$result, {}, {}, {
-                default: () => {
-                  return `Cerro Rajado`;
-                }
-              })}`;
-            }
-          })} ${validate_component(NavLi, "NavLi").$$render($$result, { href: "/noticias" }, {}, {
-            default: () => {
-              return `Noticias`;
-            }
-          })} ${validate_component(NavLi, "NavLi").$$render($$result, { href: "/contacto" }, {}, {
-            default: () => {
-              return `Contacto`;
-            }
-          })} ${validate_component(NavLi, "NavLi").$$render($$result, { href: "/ayuda" }, {}, {
-            default: () => {
-              return `Ayuda`;
-            }
-          })}`;
-        }
-      })}`;
+              }
+            )}`;
+          }
+        })}`;
+      }
     }
-  })} ${slots.default ? slots.default({}) : ``} ${validate_component(Footer, "Footer").$$render($$result, { class: "mt-4", footerType: "sitemap" }, {}, {
+  )} ${slots.default ? slots.default({}) : ``} ${validate_component(Footer, "Footer").$$render($$result, { class: "mt-4", footerType: "sitemap" }, {}, {
     default: () => {
       return `<div class="grid grid-cols-2 gap-8 py-8 px-6 md:grid-cols-4"><div><h2 class="mb-6 text-sm font-semibold text-gray-400 uppercase" data-svelte-h="svelte-gv75ks">Institucionalidad</h2> ${validate_component(FooterLinkGroup, "FooterLinkGroup").$$render($$result, { ulClass: "text-gray-300" }, {}, {
         default: () => {

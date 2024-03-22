@@ -17,44 +17,44 @@
     </NavBrand>
     <NavHamburger/>
     <NavUl class="rounded-2xl">
-        <NavLi class="font-medium text-xl"
+        <NavLi class="font-medium lg:text-xl"
                href="/">
             <TextMenu texto="Inicio"/>
         </NavLi>
-        <NavLi class="cursor-pointer font-medium text-xl">
+        <NavLi class="cursor-pointer font-medium lg:text-xl">
             <TextMenu texto="Nosotros"/>
             <ChevronDown class="w-3 h-3 ms-2 text-primary-800 dark:text-white inline"/>
         </NavLi>
         <Dropdown class="w-50 z-20">
-            <DropdownItem class="text-xl text-black" href="/nosotros/historia">Historia</DropdownItem>
+            <DropdownItem class="lg:text-xl text-black" href="/nosotros/historia">Historia</DropdownItem>
             <DropdownDivider/>
-            <DropdownItem class="text-xl text-black" href="/nosotros/mision-vision">Misión y Visión</DropdownItem>
+            <DropdownItem class="lg:text-xl text-black" href="/nosotros/mision-vision">Misión y Visión</DropdownItem>
             <DropdownDivider/>
-            <DropdownItem class="text-xl text-black" href="/nosotros/organigrama">Organigrama</DropdownItem>
+            <DropdownItem class="lg:text-xl text-black" href="/nosotros/organigrama">Organigrama</DropdownItem>
             <DropdownDivider/>
         </Dropdown>
-        <NavLi class="cursor-pointer font-medium text-xl">
+        <NavLi class="cursor-pointer font-medium lg:text-xl">
             <TextMenu texto="Programas Sociales"/>
             <ChevronDown class="w-3 h-3 ms-2 text-primary-800 dark:text-white inline"/>
         </NavLi>
         <Dropdown class="w-50 z-20">
-            <DropdownItem class="text-xl text-black" href="/programas-sociales/comedor-social">Comedor
+            <DropdownItem class="lg:text-xl text-black" href="/programas-sociales/comedor-social">Comedor
                 Social
             </DropdownItem>
             <DropdownDivider/>
         </Dropdown>
-        <NavLi class="cursor-pointer font-medium text-xl">
+        <NavLi class="cursor-pointer font-medium lg:text-xl">
             <TextMenu texto="Servicios"/>
             <ChevronDown class="w-3 h-3 ms-2 text-primary-800 dark:text-white inline"/>
         </NavLi>
         <Dropdown class="w-50 z-20">
-            <DropdownItem class="text-xl text-black" href="/servicios/cementerio">Cementerio</DropdownItem>
+            <DropdownItem class="lg:text-xl text-black" href="/servicios/cementerio">Cementerio</DropdownItem>
             <DropdownDivider/>
         </Dropdown>
-        <NavLi class="font-medium text-xl" href="/noticias">
+        <NavLi class="font-medium lg:text-xl" href="/noticias">
             <TextMenu texto="Noticias"/>
         </NavLi>
-        <NavLi class="font-medium text-xl" href="/contacto">
+        <NavLi class="font-medium lg:text-xl" href="/contacto">
             <TextMenu texto="Contacto"/>
         </NavLi>
     </NavUl>

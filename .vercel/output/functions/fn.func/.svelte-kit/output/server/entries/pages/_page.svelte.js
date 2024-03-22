@@ -1,8 +1,8 @@
-import { c as create_ssr_component, a as compute_rest_props, b as spread, e as escape_attribute_value, d as escape_object, f as escape, v as validate_component, h as add_attribute, g as getContext, k as subscribe, l as each, j as createEventDispatcher, s as setContext } from "../../chunks/ssr.js";
-import { F as Frame, I as Indicator, B as Button } from "../../chunks/Button.js";
-import { t as twMerge } from "../../chunks/bundle-mjs.js";
+import { c as create_ssr_component, a as compute_rest_props, b as spread, e as escape_attribute_value, d as escape_object, f as escape, h as add_attribute, g as getContext, k as subscribe, v as validate_component, l as each, j as createEventDispatcher, s as setContext } from "../../chunks/ssr.js";
+import { C as Card, B as Button } from "../../chunks/Card.js";
 import { w as writable } from "../../chunks/index.js";
-import { H as Heading } from "../../chunks/Heading.js";
+import { t as twMerge, i as is_void } from "../../chunks/Frame.js";
+import { I as Indicator } from "../../chunks/Indicator.js";
 const ArrowRight = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let labelled;
   let attributes;
@@ -62,54 +62,6 @@ const Quotes = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     ],
     {}
   )}>${title ? `<title>${escape(title)}</title>` : ``}<path d="M12 15H6.11A9 9 0 0110 8.86l1.79-1.2L10.69 6 8.9 7.2A11 11 0 004 16.35V23a2 2 0 002 2h6a2 2 0 002-2V17A2 2 0 0012 15zM26 15H20.11A9 9 0 0124 8.86l1.79-1.2L24.7 6 22.9 7.2A11 11 0 0018 16.35V23a2 2 0 002 2h6a2 2 0 002-2V17A2 2 0 0026 15z"></path></svg>`;
-});
-const Card = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let $$restProps = compute_rest_props($$props, ["href", "horizontal", "reverse", "img", "padding", "size"]);
-  let { href = void 0 } = $$props;
-  let { horizontal = false } = $$props;
-  let { reverse = false } = $$props;
-  let { img = void 0 } = $$props;
-  let { padding = "lg" } = $$props;
-  let { size = "sm" } = $$props;
-  const paddings = {
-    none: "",
-    xs: "p-2",
-    sm: "p-4",
-    md: "p-4 sm:p-5",
-    lg: "p-4 sm:p-6",
-    xl: "p-4 sm:p-8"
-  };
-  const sizes = {
-    none: "",
-    xs: "max-w-xs",
-    sm: "max-w-sm",
-    md: "max-w-xl",
-    lg: "max-w-2xl",
-    xl: "max-w-screen-xl"
-  };
-  let innerPadding;
-  let cardClass;
-  let imgClass;
-  if ($$props.href === void 0 && $$bindings.href && href !== void 0)
-    $$bindings.href(href);
-  if ($$props.horizontal === void 0 && $$bindings.horizontal && horizontal !== void 0)
-    $$bindings.horizontal(horizontal);
-  if ($$props.reverse === void 0 && $$bindings.reverse && reverse !== void 0)
-    $$bindings.reverse(reverse);
-  if ($$props.img === void 0 && $$bindings.img && img !== void 0)
-    $$bindings.img(img);
-  if ($$props.padding === void 0 && $$bindings.padding && padding !== void 0)
-    $$bindings.padding(padding);
-  if ($$props.size === void 0 && $$bindings.size && size !== void 0)
-    $$bindings.size(size);
-  innerPadding = paddings[padding];
-  cardClass = twMerge("flex w-full", sizes[size], reverse ? "flex-col-reverse" : "flex-col", horizontal && (reverse ? "md:flex-row-reverse" : "md:flex-row"), href && "hover:bg-gray-100 dark:hover:bg-gray-700", !img && innerPadding, $$props.class);
-  imgClass = twMerge(reverse ? "rounded-b-lg" : "rounded-t-lg", horizontal && "object-cover w-full h-96 md:h-auto md:w-48 md:rounded-none", horizontal && (reverse ? "md:rounded-e-lg" : "md:rounded-s-lg"));
-  return `${validate_component(Frame, "Frame").$$render($$result, Object.assign({}, { tag: href ? "a" : "div" }, { rounded: true }, { shadow: true }, { border: true }, { href }, $$restProps, { class: cardClass }), {}, {
-    default: () => {
-      return `${img ? `<img${add_attribute("class", imgClass, 0)}${add_attribute("src", img, 0)} alt=""> <div${add_attribute("class", innerPadding, 0)}>${slots.default ? slots.default({}) : ``}</div>` : `${slots.default ? slots.default({}) : ``}`}`;
-    }
-  })} `;
 });
 const ControlButton = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { forward } = $$props;
@@ -387,6 +339,37 @@ const Blockquote = create_ssr_component(($$result, $$props, $$bindings, slots) =
     ],
     {}
   )}>${slots.default ? slots.default({}) : ``}</blockquote> `;
+});
+const Heading = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let $$restProps = compute_rest_props($$props, ["tag", "color", "customSize"]);
+  let { tag = "h1" } = $$props;
+  let { color = "text-gray-900 dark:text-white" } = $$props;
+  let { customSize = "" } = $$props;
+  const textSizes = {
+    h1: "text-5xl font-extrabold",
+    h2: "text-4xl font-bold",
+    h3: "text-3xl font-bold",
+    h4: "text-2xl font-bold",
+    h5: "text-xl font-bold",
+    h6: "text-lg font-bold"
+  };
+  if ($$props.tag === void 0 && $$bindings.tag && tag !== void 0)
+    $$bindings.tag(tag);
+  if ($$props.color === void 0 && $$bindings.color && color !== void 0)
+    $$bindings.color(color);
+  if ($$props.customSize === void 0 && $$bindings.customSize && customSize !== void 0)
+    $$bindings.customSize(customSize);
+  return `${((tag$1) => {
+    return tag$1 ? `<${tag}${spread(
+      [
+        escape_object($$restProps),
+        {
+          class: escape_attribute_value(twMerge(customSize ? customSize : textSizes[tag], color, "w-full", $$props.class))
+        }
+      ],
+      {}
+    )}>${is_void(tag$1) ? "" : `${slots.default ? slots.default({}) : ``}`}${is_void(tag$1) ? "" : `</${tag$1}>`}` : "";
+  })(tag)} `;
 });
 const Span = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let $$restProps = compute_rest_props($$props, [
