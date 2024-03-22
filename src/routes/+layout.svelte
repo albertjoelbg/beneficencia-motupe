@@ -1,62 +1,66 @@
 <script>
     import "../app.pcss";
     import logo from "$lib/img/logobeneficencia.jpg"
-    import {Home, ChevronDown, LogoFacebook, LogoTwitter, LogoYoutube} from 'carbon-icons-svelte';
+    import {ChevronDown, LogoFacebook, LogoTwitter, LogoYoutube} from 'carbon-icons-svelte';
     import {
-        Button, ButtonGroup, Dropdown, DropdownItem, DropdownDivider, Navbar, NavBrand, NavLi, NavUl, NavHamburger,
-        Avatar, Footer, FooterLinkGroup, FooterLink, FooterBrand, FooterIcon, FooterCopyright
+        Dropdown, DropdownItem, DropdownDivider, Navbar, NavBrand, NavLi, NavUl, NavHamburger,
+        Avatar, Footer, FooterLinkGroup, FooterLink, FooterIcon, FooterCopyright
     }
         from 'flowbite-svelte';
+    import TextMenu from "$lib/components/TextMenu.svelte";
 </script>
-<Navbar rounded class="bg-primary-100">
-    <NavBrand href="/">
-        <div class="flex space-x-4 rtl:space-x-reverse">
+<Navbar rounded class="z-20 flex place-content-center bg-primary-50">
+    <NavBrand class="ml-4" href="/">
+        <div class="rtl:space-x-reverse">
             <Avatar src={logo} alt="Logo de la Beneficencia de Motupe" size="xl"/>
         </div>
     </NavBrand>
-    <ButtonGroup>
-        <Button href="/" color="red">
-            <Home/>
-        </Button>
-        <Button href="/beneficencia" outline color="primary">Beneficencia</Button>
-        <Button href="/mesa-de-partes" outline color="primary">Mesa de Partes</Button>
-    </ButtonGroup>
     <NavHamburger/>
     <NavUl class="rounded-2xl">
-        <NavLi class="cursor-pointer">
-            Programas Sociales
+        <NavLi class="font-medium text-xl"
+               href="/">
+            <TextMenu texto="Inicio"/>
+        </NavLi>
+        <NavLi class="cursor-pointer font-medium text-xl">
+            <TextMenu texto="Nosotros"/>
             <ChevronDown class="w-3 h-3 ms-2 text-primary-800 dark:text-white inline"/>
         </NavLi>
-        <Dropdown class="w-44 z-20">
-            <DropdownItem href="/programas-sociales/vaso-de-leche">Vaso de leche</DropdownItem>
+        <Dropdown class="w-50 z-20">
+            <DropdownItem class="text-xl text-black" href="/nosotros/historia">Historia</DropdownItem>
             <DropdownDivider/>
-            <DropdownItem href="/programas-sociales/pension65">Pensión 65</DropdownItem>
+            <DropdownItem class="text-xl text-black" href="/nosotros/mision-vision">Misión y Visión</DropdownItem>
             <DropdownDivider/>
-            <DropdownItem href="/programas-sociales/beca18">Beca 18</DropdownItem>
+            <DropdownItem class="text-xl text-black" href="/nosotros/organigrama">Organigrama</DropdownItem>
             <DropdownDivider/>
-            <DropdownItem href="/programas-sociales/bonos">Bonos</DropdownItem>
         </Dropdown>
-        <NavLi class="cursor-pointer">
-            Patrimonio Cultural
+        <NavLi class="cursor-pointer font-medium text-xl">
+            <TextMenu texto="Programas Sociales"/>
             <ChevronDown class="w-3 h-3 ms-2 text-primary-800 dark:text-white inline"/>
         </NavLi>
-        <Dropdown class="w-44 z-20">
-            <DropdownItem>Cerro Cruz de Chalpón</DropdownItem>
+        <Dropdown class="w-50 z-20">
+            <DropdownItem class="text-xl text-black" href="/programas-sociales/comedor-social">Comedor
+                Social
+            </DropdownItem>
             <DropdownDivider/>
-            <DropdownItem>Jaguey Negro</DropdownItem>
-            <DropdownDivider/>
-            <DropdownItem>Cerro de la Vieja</DropdownItem>
-            <DropdownDivider/>
-            <DropdownItem>Cerro Rajado</DropdownItem>
         </Dropdown>
-        <NavLi href="/noticias">Noticias</NavLi>
-        <NavLi href="/contacto">Contacto</NavLi>
-        <NavLi href="/ayuda">Ayuda</NavLi>
+        <NavLi class="cursor-pointer font-medium text-xl">
+            <TextMenu texto="Servicios"/>
+            <ChevronDown class="w-3 h-3 ms-2 text-primary-800 dark:text-white inline"/>
+        </NavLi>
+        <Dropdown class="w-50 z-20">
+            <DropdownItem class="text-xl text-black" href="/servicios/cementerio">Cementerio</DropdownItem>
+            <DropdownDivider/>
+        </Dropdown>
+        <NavLi class="font-medium text-xl" href="/noticias">
+            <TextMenu texto="Noticias"/>
+        </NavLi>
+        <NavLi class="font-medium text-xl" href="/contacto">
+            <TextMenu texto="Contacto"/>
+        </NavLi>
     </NavUl>
 </Navbar>
 
 <slot></slot>
-
 
 <Footer class="mt-4" footerType="sitemap">
     <div class="grid grid-cols-2 gap-8 py-8 px-6 md:grid-cols-4">

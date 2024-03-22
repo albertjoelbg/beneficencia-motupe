@@ -1,1 +1,0 @@
-<h1 class="text-2xl font-semibold text-center bg-primary-600 text-white p-4">Mesa de Partes</h1>
