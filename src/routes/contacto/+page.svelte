@@ -3,6 +3,9 @@
     import {Phone, Location, Email} from 'carbon-icons-svelte';
     import Titulo from '$lib/components/Titulo.svelte';
 </script>
+<svelte:head>
+    <title>Contacto</title>
+</svelte:head>
 
 <Titulo texto="Contacto"/>
 <main class="m-5 p-2 flex gap-5 flex-wrap place-content-center">
@@ -12,7 +15,8 @@
         <div class="justify-center items-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4 rtl:space-x-reverse">
             <Button>
                 <Location class="w-3.5 h-3.5 ml-2 text-white mr-2"/>
-                <a href="#">Mapa</a>
+                <a href="https://maps.app.goo.gl/NVh5RaBx5su6NK6T6" target="_blank"
+                   rel="noopener noreferrer">Mapa</a>
             </Button>
         </div>
     </Card>

@@ -7,6 +7,9 @@
     export let data;
     let images = data.imagenes;
 </script>
+<svelte:head>
+    <title>Sociedad de Beneficencia Motupe</title>
+</svelte:head>
 
 <div class="overflow-hidden w-full">
     <Carousel {images} duration={3900} let:Indicators>
