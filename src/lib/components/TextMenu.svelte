@@ -4,7 +4,7 @@
     export let texto;
 
 </script>
-<span class="text-primary-800 tipografia-manrope hover:text-secondary-400">
+<span class="text-primary-800 tipografia-manrope hover:text-white">
     {texto}
 </span>
 

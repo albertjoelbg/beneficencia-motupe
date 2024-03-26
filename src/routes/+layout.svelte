@@ -9,8 +9,9 @@
         from 'flowbite-svelte';
     import TextMenu from "$lib/components/TextMenu.svelte";
 </script>
-<div class="overflow-hidden">
-    <Navbar let:hidden let:toggle rounded class="z-20 flex place-content-center bg-primary-50">
+<div class="relative overflow-hidden">
+    <Navbar let:hidden let:toggle rounded
+            class="top-0 left-0 z-50 z-20 flex place-content-center bg-gradient-to-r from-teal-100 via-orange-200 to-teal-100 bg-opacity-0 fixed">
         <NavBrand class="ml-4" href="/">
             <div class="rtl:space-x-reverse">
                 <Avatar src={logo} alt="Logo de la Beneficencia de Motupe" size="xl"/>
@@ -38,6 +39,10 @@
                 <DropdownItem class="lg:text-xl text-black" href="/nosotros/organigrama"
                               on:click={hidden?hidden:toggle}>Organigrama
                 </DropdownItem>
+                <DropdownDivider/>
+                <DropdownItem class="lg:text-xl text-black" href="/nosotros/contacto"
+                              on:click={hidden?hidden:toggle}>Contacto
+                </DropdownItem>
             </Dropdown>
             <NavLi class="cursor-pointer font-medium lg:text-xl">
                 <TextMenu texto="Programas Sociales"/>
@@ -61,13 +66,10 @@
             <NavLi class="font-medium lg:text-xl" href="/noticias" on:click={hidden?hidden:toggle}>
                 <TextMenu texto="Noticias"/>
             </NavLi>
-            <NavLi class="font-medium lg:text-xl" href="/contacto" on:click={hidden?hidden:toggle}>
-                <TextMenu texto="Contacto"/>
-            </NavLi>
         </NavUl>
     </Navbar>
 
-    <main class="w-full my-0 mx-auto box-border">
+    <main class="w-full my-0 mx-auto box-border pt-40">
         <slot></slot>
     </main>
 
