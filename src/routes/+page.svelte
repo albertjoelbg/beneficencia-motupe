@@ -5,6 +5,7 @@
     import beca18 from "$lib/img/beca18.png";
     import presidenteBeneficencia from "$lib/img/presidentebeneficencia.png";
     import Titulo from "$lib/components/Titulo.svelte";
+    import '@fontsource/montserrat/800.css';
 
     export let data;
     let images = data.imagenes;
@@ -13,7 +14,13 @@
     <title>Sociedad de Beneficencia Motupe</title>
 </svelte:head>
 
-<div class="overflow-hidden w-full">
+<div class="relative overflow-hidden w-full h-full">
+    <Heading tag="h1"
+             class="mb-4 absolute z-40 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white bg-transparent"
+             customSize="text-3xl font-extrabold  md:text-5xl lg:text-6xl">
+        <Span gradient class="text-white opacity-90 tipografia-montserrat">Sociedad de Beneficencia de Motupe</Span>
+    </Heading>
+    <div class="absolute z-30 inset-0 bg-red-700 opacity-50"></div>
     <Carousel {images} duration={3900} let:Indicators>
         <div slot="slide" let:Slide let:index>
             <Slide image={images[index]}/>
@@ -44,7 +51,7 @@
 </article>
 
 <section class="bg-green-100">
-   <Titulo texto="Servicios de Protección Social"/>
+    <Titulo texto="Servicios de Protección Social"/>
 
     <article class="size-1/2 m-2 p-2 flex justify-center gap-5">
         <Card class="m-2" img={vasoDeLeche}>

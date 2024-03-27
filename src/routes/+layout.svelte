@@ -1,6 +1,6 @@
 <script>
     import "../app.pcss";
-    import logo from "$lib/img/logobeneficencia.jpg";
+    import logo from "$lib/img/logobeneficencia.png";
     import {ChevronDown, LogoFacebook, LogoTwitter, LogoYoutube} from 'carbon-icons-svelte';
     import {
         Dropdown, DropdownItem, DropdownDivider, Navbar, NavBrand, NavLi, NavUl, NavHamburger,
@@ -9,6 +9,7 @@
         from 'flowbite-svelte';
     import TextMenu from "$lib/components/TextMenu.svelte";
 </script>
+
 <div class="relative overflow-hidden">
     <Navbar let:hidden let:toggle rounded
             class="top-0 left-0 z-50 flex place-content-center bg-gradient-to-r from-orange-200 via-teal-100 to-orange-200 fixed">
@@ -18,7 +19,7 @@
             </div>
         </NavBrand>
         <NavHamburger/>
-        <NavUl class="rounded-2xl">
+        <NavUl>
             <NavLi class="font-bold lg:text-lg"
                    href="/" on:click={hidden?hidden:toggle}>
                 <TextMenu texto="INICIO"/>
