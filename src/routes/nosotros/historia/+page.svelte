@@ -6,7 +6,7 @@
     <title>Historia</title>
 </svelte:head>
 <Titulo texto="Historia"/>
-<article class="pt-5 px-6 pb-10  m-2">
+<article class="pt-5 px-6 pb-10 m-2">
     <P class="mb-3" color="text-gray-500 dark:text-gray-400" firstupper>Las Sociedades de Beneficencia Perú, existen
         desde el siglo pasado como base histórica de la Institucionalidad de nuestro país y su vigencia aún contribuye
         en el rol social del Estado cumpliendo con los fines para los cuales se crearon.

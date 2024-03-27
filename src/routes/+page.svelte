@@ -4,6 +4,8 @@
     import vasoDeLeche from "$lib/img/vasodeleche.jpg";
     import beca18 from "$lib/img/beca18.png";
     import presidenteBeneficencia from "$lib/img/presidentebeneficencia.png";
+    import Titulo from "$lib/components/Titulo.svelte";
+
     export let data;
     let images = data.imagenes;
 </script>
@@ -20,9 +22,7 @@
     </Carousel>
 </div>
 
-<Heading tag="h1" class="m-4 p-4" customSize=" text-center text-3xl font-extrabold  md:text-5xl lg:text-6xl">
-    <Span gradient>Bienvenidos</Span>
-</Heading>
+<Titulo texto="Bienvenidos"/>
 
 <article class="flex justify-center m-4 p-4">
     <Card img={presidenteBeneficencia}>
@@ -43,10 +43,8 @@
     </Card>
 </article>
 
-<section class="bg-primary-100">
-    <Heading tag="h1" class="m-4 p-4" customSize=" text-center text-3xl font-extrabold  md:text-5xl lg:text-6xl">
-        <Span gradient>Programas Sociales</Span>
-    </Heading>
+<section class="bg-green-100">
+   <Titulo texto="Servicios de Protección Social"/>
 
     <article class="size-1/2 m-2 p-2 flex justify-center gap-5">
         <Card class="m-2" img={vasoDeLeche}>

@@ -4,12 +4,6 @@
     export let texto;
 
 </script>
-<span class="text-primary-800 tipografia-manrope hover:text-white">
+<span class="text-primary-800 tipografia-manrope hover:text-white hover:bg-yellow-300">
     {texto}
 </span>
-
-<style>
-    .tipografia-manrope {
-        font-family: 'Manrope Variable', sans-serif;
-    }
-</style>

@@ -11,65 +11,64 @@
 </script>
 <div class="relative overflow-hidden">
     <Navbar let:hidden let:toggle rounded
-            class="top-0 left-0 z-50 z-20 flex place-content-center bg-gradient-to-r from-teal-100 via-orange-200 to-teal-100 bg-opacity-0 fixed">
-        <NavBrand class="ml-4" href="/">
+            class="top-0 left-0 z-50 flex place-content-center bg-gradient-to-r from-orange-200 via-teal-100 to-orange-200 fixed">
+        <NavBrand href="/">
             <div class="rtl:space-x-reverse">
-                <Avatar src={logo} alt="Logo de la Beneficencia de Motupe" size="xl"/>
+                <Avatar src={logo} alt="Logo de la Beneficencia de Motupe" size="lg"/>
             </div>
         </NavBrand>
         <NavHamburger/>
         <NavUl class="rounded-2xl">
-            <NavLi class="font-medium lg:text-xl"
+            <NavLi class="font-bold lg:text-lg"
                    href="/" on:click={hidden?hidden:toggle}>
-                <TextMenu texto="Inicio"/>
+                <TextMenu texto="INICIO"/>
             </NavLi>
-            <NavLi class="cursor-pointer font-medium lg:text-xl">
-                <TextMenu texto="Nosotros"/>
+            <NavLi class="cursor-pointer font-bold lg:text-lg">
+                <TextMenu texto="NOSOTROS"/>
                 <ChevronDown class="w-3 h-3 ms-2 text-primary-800 dark:text-white inline"/>
             </NavLi>
             <Dropdown class="w-50 z-20">
-                <DropdownItem class="lg:text-xl text-black" href="/nosotros/historia" on:click={hidden?hidden:toggle}>
+                <DropdownItem class="lg:text-lg text-black" href="/nosotros/historia" on:click={hidden?hidden:toggle}>
                     Historia
                 </DropdownItem>
                 <DropdownDivider/>
-                <DropdownItem class="lg:text-xl text-black" href="/nosotros/mision-vision"
+                <DropdownItem class="lg:text-lg text-black" href="/nosotros/mision-vision"
                               on:click={hidden?hidden:toggle}>Misión y Visión
                 </DropdownItem>
                 <DropdownDivider/>
-                <DropdownItem class="lg:text-xl text-black" href="/nosotros/organigrama"
+                <DropdownItem class="lg:text-lg text-black" href="/nosotros/organigrama"
                               on:click={hidden?hidden:toggle}>Organigrama
                 </DropdownItem>
                 <DropdownDivider/>
-                <DropdownItem class="lg:text-xl text-black" href="/nosotros/contacto"
+                <DropdownItem class="lg:text-lg text-black" href="/nosotros/contacto"
                               on:click={hidden?hidden:toggle}>Contacto
                 </DropdownItem>
             </Dropdown>
-            <NavLi class="cursor-pointer font-medium lg:text-xl">
-                <TextMenu texto="Programas Sociales"/>
+            <NavLi class="cursor-pointer font-bold lg:text-lg">
+                <TextMenu texto="PROGRAMAS SOCIALES"/>
                 <ChevronDown class="w-3 h-3 ms-2 text-primary-800 dark:text-white inline"/>
             </NavLi>
             <Dropdown class="w-50 z-20">
-                <DropdownItem class="lg:text-xl text-black" href="/programas-sociales/comedor-social"
-                              on:click={hidden?hidden:toggle}>Comedor
-                    Social
+                <DropdownItem class="lg:text-lg text-black" href="/programas-sociales/comedor-social"
+                              on:click={hidden?hidden:toggle}>Comedor Social
                 </DropdownItem>
             </Dropdown>
-            <NavLi class="cursor-pointer font-medium lg:text-xl">
-                <TextMenu texto="Servicios"/>
+            <NavLi class="cursor-pointer font-bold lg:text-lg">
+                <TextMenu texto="SERVICIOS"/>
                 <ChevronDown class="w-3 h-3 ms-2 text-primary-800 dark:text-white inline"/>
             </NavLi>
             <Dropdown class="w-50 z-20">
-                <DropdownItem class="lg:text-xl text-black" href="/servicios/cementerio"
+                <DropdownItem class="lg:text-lg text-black" href="/servicios/cementerio"
                               on:click={hidden?hidden:toggle}>Cementerio
                 </DropdownItem>
             </Dropdown>
-            <NavLi class="font-medium lg:text-xl" href="/noticias" on:click={hidden?hidden:toggle}>
-                <TextMenu texto="Noticias"/>
+            <NavLi class="font-bold lg:text-lg" href="/noticias" on:click={hidden?hidden:toggle}>
+                <TextMenu texto="NOTICIAS"/>
             </NavLi>
         </NavUl>
     </Navbar>
 
-    <main class="w-full my-0 mx-auto box-border pt-40">
+    <main class="w-full my-0 mx-auto box-border pt-24">
         <slot></slot>
     </main>
 
