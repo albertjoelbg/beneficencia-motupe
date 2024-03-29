@@ -12,7 +12,7 @@
 
 <div class="relative overflow-hidden">
     <Navbar let:hidden let:toggle rounded
-            class="top-0 left-0 z-50 flex place-content-center bg-gradient-to-r from-orange-200 via-teal-100 to-orange-200 fixed">
+            class="top-0 left-0 z-50 flex place-content-center bg-gradient-to-r from-orange-200 via-teal-100 to-orange-200 fixed shadow-md shadow-gray-400">
         <NavBrand href="/">
             <div class="rtl:space-x-reverse">
                 <Avatar src={logo} alt="Logo de la Beneficencia de Motupe" size="lg"/>
