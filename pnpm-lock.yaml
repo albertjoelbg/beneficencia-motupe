@@ -11,12 +11,9 @@ dependencies:
   '@fontsource-variable/manrope':
     specifier: ^5.0.19
     version: 5.0.19
-  '@fontsource/montserrat':
-    specifier: ^5.0.17
-    version: 5.0.17
-  '@fontsource/roboto-condensed':
-    specifier: ^5.0.15
-    version: 5.0.15
+  '@fontsource/poppins':
+    specifier: ^5.0.12
+    version: 5.0.12
   '@sveltejs/adapter-vercel':
     specifier: ^5.1.0
     version: 5.1.0(@sveltejs/kit@2.5.2)
@@ -289,12 +286,8 @@ packages:
     resolution: {integrity: sha512-1WQ1NFnS3tfZ+ZQ3nNJ6sQGpIr6RWhq/wTovlcTlmvVrd53lnmITSolq6vBSEgVef6DWNFUehEvodDcyL3O6EA==}
     dev: false
 
-  /@fontsource/montserrat@5.0.17:
-    resolution: {integrity: sha512-3V3F8GqeN8wawLmAkAfTCYsBYRKu+JLm6ivWWX/v0dCYYPcwtQX0h5Z8j68N1YumuT75MqrghqU42w9DnFHojQ==}
-    dev: false
-
-  /@fontsource/roboto-condensed@5.0.15:
-    resolution: {integrity: sha512-0AFvcI/8JQ5+FZE12hdaE1W/1ooJUzd5XP7jD74+SP+PArsswJ+6OV/oKTasgeQeZlvGrcD3chO6yr5K4JGwzA==}
+  /@fontsource/poppins@5.0.12:
+    resolution: {integrity: sha512-0qzBxtIJLh82iMJ9pCXKYwGs1zyS+jyUmwVJ59+JdYnEaFVkDsxVOk9yDWfVOs14ALUneodU2m5YSGma6dCYCw==}
     dev: false
 
   /@isaacs/cliui@8.0.2:

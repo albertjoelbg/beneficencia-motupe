@@ -1,12 +1,12 @@
 <script>
     import {Carousel, Card, Button, Heading, Span, P, Avatar, Blockquote} from 'flowbite-svelte'
     import {ArrowRight, Quotes} from 'carbon-icons-svelte'
-    import vasoDeLeche from "$lib/img/vasodeleche.jpg";
-    import beca18 from "$lib/img/beca18.png";
+    import comedor from "$lib/img/carrusel-2.jpg";
     import presidenteBeneficencia from "$lib/img/presidentebeneficencia.png";
     import Titulo from "$lib/components/Titulo.svelte";
-    import '@fontsource/roboto-condensed/400.css';
-    import '@fontsource/roboto-condensed/700.css';
+    import '@fontsource/poppins/500.css';
+    import '@fontsource/poppins/600.css';
+    import '@fontsource/poppins/700.css';
 
     export let data;
     let images = data.imagenes;
@@ -19,7 +19,7 @@
     <Heading tag="h1"
              class="mb-4 absolute z-40 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white bg-transparent"
              customSize="text-3xl font-extrabold  md:text-5xl lg:text-6xl">
-        <Span gradient class="text-white opacity-90 tipografia-roboto-condensed">SOCIEDAD DE BENEFICENCIA DE
+        <Span gradient class="text-gray-100 opacity-90 tipografia-poppins">SOCIEDAD DE BENEFICENCIA DE
             MOTUPE</Span>
     </Heading>
     <div class="absolute z-30 inset-0 bg-gradient-to-t from-blue-600 via-gray-800 to-red-600 opacity-30"></div>
@@ -56,16 +56,9 @@
     <Titulo texto="Servicios de Protección Social"/>
 
     <article class="size-1/2 m-2 p-2 flex justify-center gap-5">
-        <Card class="m-2" img={vasoDeLeche}>
-            <Button class="outline text-white" href="/programas-sociales/vaso-de-leche">
-                <h6 class="mb-2 text-xl font-semibold tracking-tight text-gray-900 text-white">Vaso de Leche</h6>
-                <ArrowRight class="w-3.5 h-3.5 ms-2 text-white"/>
-            </Button>
-        </Card>
-
-        <Card img={beca18}>
-            <Button class="outline text-white" href="/programas-sociales/beca18">
-                <h6 class="mb-2 text-xl font-semibold tracking-tight text-gray-900 text-white">Beca 18</h6>
+        <Card class="m-2" img={comedor}>
+            <Button class="outline text-white" href="/programas-sociales/comedor-social">
+                <h6 class="mb-2 text-xl font-semibold tracking-tight text-gray-900 text-white">Comedor Social</h6>
                 <ArrowRight class="w-3.5 h-3.5 ms-2 text-white"/>
             </Button>
         </Card>
@@ -73,7 +66,5 @@
 </section>
 
 <section>
-    <Heading tag="h1" class="m-4 p-4" customSize=" text-center text-3xl font-extrabold  md:text-5xl lg:text-6xl">
-        <Span gradient>Noticias</Span>
-    </Heading>
+    <Titulo texto="Noticias"/>
 </section>

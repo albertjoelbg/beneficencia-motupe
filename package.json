@@ -25,8 +25,7 @@
   "dependencies": {
     "@fontsource-variable/lora": "^5.0.17",
     "@fontsource-variable/manrope": "^5.0.19",
-    "@fontsource/montserrat": "^5.0.17",
-    "@fontsource/roboto-condensed": "^5.0.15",
+    "@fontsource/poppins": "^5.0.12",
     "@sveltejs/adapter-vercel": "^5.1.0"
   }
 }
