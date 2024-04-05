@@ -1,9 +1,9 @@
-import miembros from '$lib/img/carrusel-1.jpg';
-import comedor from '$lib/img/carrusel-2.jpg';
-import reunion from '$lib/img/carrusel-3.jpg';
-import programa from '$lib/img/carrusel-4.jpg';
-import aniversario from '$lib/img/carrusel-5.jpg';
-import iscade from '$lib/img/carrusel-6.jpg';
+import miembros from '$lib/img/carrusel/carrusel-1.jpg';
+import comedor from '$lib/img/carrusel/carrusel-2.jpg';
+import reunion from '$lib/img/carrusel/carrusel-3.jpg';
+import programa from '$lib/img/carrusel/carrusel-4.jpg';
+import aniversario from '$lib/img/carrusel/carrusel-5.jpg';
+import iscade from '$lib/img/carrusel/carrusel-6.jpg';
 
 
 export function load() {

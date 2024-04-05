@@ -1,18 +1,18 @@
 <script>
-import logo from "$lib/img/logobeneficencia.png";
-import {
-    Avatar,
-    Dropdown,
-    DropdownDivider,
-    DropdownItem,
-    Navbar,
-    NavBrand,
-    NavHamburger,
-    NavLi,
-    NavUl
-} from "flowbite-svelte";
-import TextMenu from "$lib/components/TextMenu.svelte";
-import {ChevronDown} from "carbon-icons-svelte";
+    import logo from "$lib/img/logobeneficencia.png";
+    import {
+        Avatar,
+        Dropdown,
+        DropdownDivider,
+        DropdownItem,
+        Navbar,
+        NavBrand,
+        NavHamburger,
+        NavLi,
+        NavUl
+    } from "flowbite-svelte";
+    import TextMenu from "$lib/components/TextMenu.svelte";
+    import {ChevronDown} from "carbon-icons-svelte";
 </script>
 
 <Navbar let:hidden let:toggle rounded
@@ -54,8 +54,8 @@ import {ChevronDown} from "carbon-icons-svelte";
             <ChevronDown class="w-3 h-3 ms-2 text-primary-800 dark:text-white inline"/>
         </NavLi>
         <Dropdown class="w-50 z-20">
-            <DropdownItem class="lg:text-lg text-black" href="/servicios-proteccion-social/comedor-social"
-                          on:click={hidden?hidden:toggle}>Comedor Social
+            <DropdownItem class="lg:text-lg text-black" href="/servicios-proteccion-social/comedor-institucional"
+                          on:click={hidden?hidden:toggle}>Comedor Institucional
             </DropdownItem>
         </Dropdown>
         <NavLi class="cursor-pointer font-bold lg:text-lg">

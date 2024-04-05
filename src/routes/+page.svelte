@@ -1,7 +1,7 @@
 <script>
     import {Carousel, Card, Button, Heading, Span, P, Avatar, Blockquote} from 'flowbite-svelte'
     import {ArrowRight, Quotes} from 'carbon-icons-svelte'
-    import comedor from "$lib/img/carrusel-2.jpg";
+    import comedor from "$lib/img/comedor-institucional/comedor-institucional-4.jpg";
     import presidenteBeneficencia from "$lib/img/presidentebeneficencia.png";
     import Titulo from "$lib/components/Titulo.svelte";
     import '@fontsource/poppins/500.css';
@@ -37,7 +37,7 @@
     <Card img={presidenteBeneficencia}>
         <figure class="mx-auto max-w-screen-md text-center">
             <Quotes class="mx-auto mb-3 w-12 h-12 text-gray-400 dark:text-gray-600"/>
-            <Blockquote alignment="center" size="2xl">"Servir al pueblo con dedicación y perseverancia."
+            <Blockquote alignment="center" size="2xl">"Si no se vive para los demás, la vida carece de sentido."
             </Blockquote>
             <figcaption class="flex justify-center items-center mt-6 space-x-3 rtl:space-x-reverse">
                 <div class="flex items-center divide-x-2 rtl:divide-x-reverse divide-gray-500 dark:divide-gray-700">
@@ -57,8 +57,9 @@
 
     <article class="size-1/2 m-2 p-2 flex justify-center gap-5">
         <Card class="m-2" img={comedor}>
-            <Button class="outline text-white" href="/programas-sociales/comedor-social">
-                <h6 class="mb-2 text-xl font-semibold tracking-tight text-gray-900 text-white">Comedor Social</h6>
+            <Button class="outline text-white" href="/servicios-proteccion-social/comedor-institucional">
+                <h6 class="mb-2 text-xl font-semibold tracking-tight text-gray-900 text-white">Comedor
+                    Institucional</h6>
                 <ArrowRight class="w-3.5 h-3.5 ms-2 text-white"/>
             </Button>
         </Card>
