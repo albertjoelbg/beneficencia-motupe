@@ -33,7 +33,8 @@
             <ChevronDown class="w-3 h-3 ms-2 text-primary-800 dark:text-white inline"/>
         </NavLi>
         <Dropdown class="w-50 z-20">
-            <DropdownItem class="lg:text-lg text-black" href="/nosotros/historia" on:click={hidden?hidden:toggle}>
+            <DropdownItem class="lg:text-lg text-black" href="/nosotros/historia"
+                          on:click={hidden?hidden:toggle}>
                 Historia
             </DropdownItem>
             <DropdownDivider/>

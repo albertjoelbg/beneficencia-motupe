@@ -1,6 +1,6 @@
 <script>
-    import {Carousel, Card, Button, Heading, Span, P, Avatar, Blockquote} from 'flowbite-svelte'
-    import {ArrowRight, Quotes} from 'carbon-icons-svelte'
+    import {Carousel, Card, Button, Heading, Span, Blockquote} from 'flowbite-svelte'
+    import {Quotes} from 'carbon-icons-svelte'
     import comedor from "$lib/img/comedor-institucional/comedor-institucional-4.jpg";
     import presidenteBeneficencia from "$lib/img/presidentebeneficencia.png";
     import Titulo from "$lib/components/Titulo.svelte";
@@ -56,11 +56,11 @@
     <Titulo texto="Servicios de Protección Social"/>
 
     <article class="size-1/2 m-2 p-2 flex justify-center gap-5">
-        <Card class="m-2" img={comedor}>
+        <Card class="m-2 text-center" img={comedor}>
             <Button class="outline text-white" href="/servicios-proteccion-social/comedor-institucional">
-                <h6 class="mb-2 text-xl font-semibold tracking-tight text-gray-900 text-white">Comedor
+                <h6 class="text-md font-semibold tracking-tight text-gray-900 text-white md:text-xl">Comedor
                     Institucional</h6>
-                <ArrowRight class="w-3.5 h-3.5 ms-2 text-white"/>
+
             </Button>
         </Card>
     </article>
