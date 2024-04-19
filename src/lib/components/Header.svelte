@@ -64,8 +64,8 @@
             <ChevronDown class="w-3 h-3 ms-2 text-primary-800 dark:text-white inline"/>
         </NavLi>
         <Dropdown class="w-50 z-20">
-            <DropdownItem class="lg:text-lg text-black" href="/servicios/cementerio"
-                          on:click={hidden?hidden:toggle}>Cementerio
+            <DropdownItem class="lg:text-lg text-black" href="/servicios/servicio-funerario-integral"
+                          on:click={hidden?hidden:toggle}>Servicio Funerario Integral
             </DropdownItem>
         </Dropdown>
         <NavLi class="font-bold lg:text-lg" href="/noticias" on:click={hidden?hidden:toggle}>

@@ -26,7 +26,7 @@
         <CheckmarkFilled class="w-3 h-3 text-primary-600 dark:text-primary-400"/>
       </span>
                 </svelte:fragment>
-                <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400 max-w-4xl">La Sociedad de
+                <p class="mb-4 text-base font-normal text-gray-700 dark:text-gray-400 max-w-4xl">La Sociedad de
                     Beneficencia
                     de Motupe cuenta con un Comedor Institucional, "Señor de la Divina Misericordia", que atiende
                     a personas en situación económica de pobreza y probreza extrema, con desayunos y almuerzos a las
@@ -40,7 +40,7 @@
         <CheckmarkFilled class="w-3 h-3 text-primary-600 dark:text-primary-400"/>
       </span>
                 </svelte:fragment>
-                <p class="text-base font-normal text-gray-500 dark:text-gray-400 max-w-4xl">Contamos con 200
+                <p class="text-base font-normal text-gray-700 dark:text-gray-400 max-w-4xl">Contamos con 200
                     beneficiarios en
                     total a los cuales 50 llegan a diario a consumir su desayuno y almuerzo, y 150 beneficiarios que
                     se les entrega en crudo.</p>
@@ -51,9 +51,9 @@
         <CheckmarkFilled class="w-3 h-3 text-primary-600 dark:text-primary-400"/>
       </span>
                 </svelte:fragment>
-                <p class="text-base font-normal text-gray-500 dark:text-gray-400 max-w-4xl">Los requisitos para ser
+                <p class="text-base font-normal text-gray-700 dark:text-gray-400 max-w-4xl">Los requisitos para ser
                     beneficiario del Comedor Institucional, son:</p>
-                <ul>
+                <ul class="text-gray-700">
                     <li>Estar registrado en el SISFOH con una situación económica de pobreza o pobreza extrema</li>
                     <li>No ser beneficiario de otro programa similar en alguna otra institución del estado</li>
                 </ul>
@@ -64,7 +64,7 @@
         <CheckmarkFilled class="w-3 h-3 text-primary-600 dark:text-primary-400"/>
       </span>
                 </svelte:fragment>
-                <p class="text-base font-normal text-gray-500 dark:text-gray-400 max-w-4xl pb-3">Nuestro horario de
+                <p class="text-base font-normal text-gray-700 dark:text-gray-400 max-w-4xl pb-3">Nuestro horario de
                     atención es de lunes a viernes</p>
                 <Table>
                     <TableHead>

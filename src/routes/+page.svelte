@@ -3,6 +3,7 @@
     import {Quotes} from 'carbon-icons-svelte'
     import comedor from "$lib/img/comedor-institucional/comedor-institucional-4.jpg";
     import presidenteBeneficencia from "$lib/img/presidentebeneficencia.png";
+    import serfin from "$lib/img/servicios/serfin.jpg"
     import Titulo from "$lib/components/Titulo.svelte";
     import '@fontsource/poppins/500.css';
     import '@fontsource/poppins/600.css';
@@ -52,15 +53,28 @@
     </Card>
 </article>
 
-<section class="bg-green-100">
+<section class="bg-gradient-to-tl from-green-100 to-white p-3">
     <Titulo texto="Servicios de Protección Social"/>
 
-    <article class="size-1/2 m-2 p-2 flex justify-center gap-5">
+    <article class="size-1/2 m-auto p-2 flex justify-center gap-5">
         <Card class="m-2 text-center" img={comedor}>
             <Button class="outline text-white" href="/servicios-proteccion-social/comedor-institucional">
                 <h6 class="text-md font-semibold tracking-tight text-gray-900 text-white md:text-xl">Comedor
                     Institucional</h6>
 
+            </Button>
+        </Card>
+    </article>
+</section>
+
+<section class="bg-gradient-to-tl from-gray-100 to-white p-3">
+    <Titulo texto="Servicios"/>
+
+    <article class="size-1/2 mx-auto p-2 flex justify-center gap-5">
+        <Card class="m-2 text-center" img={serfin}>
+            <Button class="outline text-white" href="/servicios/servicio-funerario-integral">
+                <h6 class="text-md font-semibold tracking-tight text-gray-900 text-white md:text-xl">Servicio
+                    Funerario Integral</h6>
             </Button>
         </Card>
     </article>
