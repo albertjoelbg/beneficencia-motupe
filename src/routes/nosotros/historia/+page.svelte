@@ -8,8 +8,10 @@
 <Titulo texto="Historia"/>
 <section class="flex flex-1 w-full">
     <article
-            class="pt-5 px-8 pb-10 text-xl max-w-5xl text-center mx-auto">
-        <P class="mb-3" color="text-gray-500 dark:text-gray-400" firstupper>Las Sociedades de Beneficencia Perú, existen
+            class="pt-4 px-8 pb-10 text-xl max-w-5xl mx-auto">
+        <P class="mb-3" color="text-gray-500 dark:text-gray-400" firstupper>Las Sociedades de Beneficencia
+            Perú,
+            existen
             desde el siglo pasado como base histórica de la Institucionalidad de nuestro país y su vigencia aún
             contribuye
             en el rol social del Estado cumpliendo con los fines para los cuales se crearon.

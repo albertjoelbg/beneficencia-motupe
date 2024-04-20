@@ -10,7 +10,6 @@
                 <FooterLink liClass="mb-4" href="/">Portal de Transparencia</FooterLink>
                 <FooterLink liClass="mb-4" href="/">Reglamento Interno</FooterLink>
                 <FooterLink liClass="mb-4" href="/">Normativas Vigentes</FooterLink>
-                <FooterLink liClass="mb-4" href="/">Blog</FooterLink>
             </FooterLinkGroup>
         </div>
         <div>
@@ -18,7 +17,7 @@
             <FooterLinkGroup ulClass="text-gray-300">
                 <FooterLink liClass="mb-4" href="/">Youtube</FooterLink>
                 <FooterLink liClass="mb-4" href="/">Twitter</FooterLink>
-                <FooterLink liClass="mb-4" href="/">Facebook</FooterLink>
+                <FooterLink liClass="mb-4" href="https://web.facebook.com/sociedad.motupe">Facebook</FooterLink>
             </FooterLinkGroup>
         </div>
         <div>
@@ -33,9 +32,8 @@
             <h2 class="mb-6 text-sm font-semibold uppercase text-gray-400">Novedades</h2>
             <FooterLinkGroup ulClass="text-gray-300">
                 <FooterLink liClass="mb-4" href="/">Eventos</FooterLink>
-                <FooterLink liClass="mb-4" href="/">Noticias</FooterLink>
+                <FooterLink liClass="mb-4" href="/noticias">Noticias</FooterLink>
                 <FooterLink liClass="mb-4" href="/">Logros</FooterLink>
-                <FooterLink liClass="mb-4" href="/">Incentivo Cultural</FooterLink>
             </FooterLinkGroup>
         </div>
     </div>
@@ -43,7 +41,7 @@
         <FooterCopyright spanClass="text-sm text-gray-300 sm:text-center" href="/"
                          by="Sociedad de Beneficencia Motupe"/>
         <div class="flex mt-4 space-x-6 rtl:space-x-reverse sm:justify-center md:mt-0">
-            <FooterIcon href="/">
+            <FooterIcon href="https://web.facebook.com/sociedad.motupe">
                 <LogoFacebook
                         class="w-4 h-4 text-gray-500 dark:text-gray-500 hover:text-gray-900 dark:hover:text-white"/>
             </FooterIcon>
