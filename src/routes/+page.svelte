@@ -2,6 +2,8 @@
     import {Carousel, Card, Button, Heading, Span, Blockquote} from 'flowbite-svelte'
     import {Quotes} from 'carbon-icons-svelte'
     import comedor from "$lib/img/comedor-institucional/comedor-institucional-4.jpg";
+    import noticia1 from "$lib/img/noticias/mondragonsinviolencia/mondragonsinviolencia-1.jpg";
+    import noticia2 from "$lib/img/noticias/diadelninoperuano/diadelninoperuano-1.jpg";
     import presidenteBeneficencia from "$lib/img/presidentebeneficencia.png";
     import serfin from "$lib/img/servicios/serfin.jpg"
     import Titulo from "$lib/components/Titulo.svelte";
@@ -56,7 +58,7 @@
 <section class="bg-gradient-to-tl from-green-100 to-white p-3">
     <Titulo texto="Servicios de Protección Social"/>
 
-    <article class="size-1/2 m-auto p-2 flex justify-center gap-5">
+    <article class="size-2/3 m-auto p-2 flex justify-center gap-5">
         <Card class="m-2 text-center" img={comedor}>
             <Button class="outline text-white" href="/servicios-proteccion-social/comedor-institucional">
                 <h6 class="text-md font-semibold tracking-tight text-gray-900 text-white md:text-xl">Comedor
@@ -70,7 +72,7 @@
 <section class="bg-gradient-to-tl from-gray-100 to-white p-3">
     <Titulo texto="Servicios"/>
 
-    <article class="size-1/2 mx-auto p-2 flex justify-center gap-5">
+    <article class="size-2/3 mx-auto p-2 flex justify-center gap-5">
         <Card class="m-2 text-center" img={serfin}>
             <Button class="outline text-white" href="/servicios/servicio-funerario-integral">
                 <h6 class="text-md font-semibold tracking-tight text-gray-900 text-white md:text-xl">Servicio
@@ -80,6 +82,22 @@
     </article>
 </section>
 
-<section>
+<section class="bg-gradient-to-tl from-green-100 to-white p-3">
     <Titulo texto="Noticias"/>
+
+    <article class="size-2/3 mx-auto p-2 flex justify-center gap-5">
+        <Card class="m-2 text-center" img={noticia1}>
+            <Button class="outline text-white" href="/noticias/mondragonsinviolencia">
+                <h6 class="text-md font-semibold tracking-tight text-gray-900 text-white md:text-xl">Mongragón sin
+                    Violencia</h6>
+            </Button>
+        </Card>
+
+        <Card class="m-2 text-center" img={noticia2}>
+            <Button class="outline text-white" href="/noticias/diadelninoperuano">
+                <h6 class="text-md font-semibold tracking-tight text-gray-900 text-white md:text-xl">Día del niño
+                    peruano</h6>
+            </Button>
+        </Card>
+    </article>
 </section>
