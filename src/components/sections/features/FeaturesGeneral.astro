@@ -25,7 +25,7 @@ const { title, subTitle, src, alt, features } = Astro.props;
   class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full"
 >
   <!-- Block to display the feature image -->
-  <div class="relative mb-6 overflow-hidden md:mb-8">
+  <div class="filter relative mb-6 overflow-hidden md:mb-8">
     {
       src && alt && (
         <Image
@@ -38,19 +38,17 @@ const { title, subTitle, src, alt, features } = Astro.props;
         />
       )
     }
+    <div class="absolute inset-0 bg-indigo-700 bg-opacity-40"></div>
+
   </div>
 
-  <!-- Displaying the main content consisting of title, subtitle, and several `IconBlock` components -->
   <div class="mt-5 grid gap-8 lg:mt-16 lg:grid-cols-3 lg:gap-12">
-    <!-- Block for title and subtitle -->
     <div class="lg:col-span-1">
-      <!-- Rendering title -->
       <h2
         class="text-balance text-2xl font-bold text-neutral-800 dark:text-neutral-200 md:text-3xl"
       >
         {title}
       </h2>
-      <!-- Rendering subtitle -->
       {
         subTitle && (
           <p class="mt-2 text-pretty text-neutral-600 dark:text-neutral-400 md:mt-4">
