@@ -1,18 +1,11 @@
 ---
 import { Image } from 'astro:assets';
 import Logo from "@images/logo-beneficencia.png";
-
-interface Props {
-  src: string; // Mantén el tipo como string
-  alt?: string;
-}
-
-const { src, alt }: Props = Astro.props;
 ---
 
 <Image
   src={Logo}
-  alt={alt || "Imagen"}
+  alt="Logo"
   class="h-16 w-16 object-center rounded-full"
   draggable="false"
   loading="eager"
