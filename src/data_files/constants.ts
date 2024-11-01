@@ -1,12 +1,13 @@
-import ogImageSrc from "@images/social.png";
+import ogImageSrc from "@images/social.jpg";
 
 export const SITE = {
-  title: "ScrewFast",
+  title: "Sociedad de Beneficencia de Motupe",
   tagline: "Top-quality Hardware Tools",
-  description: "ScrewFast offers top-tier hardware tools and expert construction services to meet all your project needs. Start exploring and contact our sales team for superior quality and reliability.",
-  description_short: "ScrewFast offers top-tier hardware tools and expert construction services to meet all your project needs.",
-  url: "https://screwfast.uk",
-  author: "Emil Gulamov",
+  description: "Somos una organización que brinda servicios comunitarios y en beneficio de los más" +
+    " desfavorecidos.",
+  description_short: "Brindamos servicios comunitarios y en beneficio de los más desfavorecidos",
+  url: "https://beneficencia-motupe.vercel.app",
+  author: "Albert Bonilla Guerrero"
 };
 
 export const SEO = {
@@ -24,16 +25,17 @@ export const SEO = {
       "@type": "WebSite",
       url: SITE.url,
       name: SITE.title,
-      description: SITE.description,
-    },
-  },
+      description: SITE.description
+    }
+  }
 };
 
 export const OG = {
-  locale: "en_US",
+  locale: "es_PE",
   type: "website",
   url: SITE.url,
-  title: `${SITE.title}: : Hardware Tools & Construction Services`,
-  description: "Equip your projects with ScrewFast's top-quality hardware tools and expert construction services. Trusted by industry leaders, ScrewFast offers simplicity, affordability, and reliability. Experience the difference with user-centric design and cutting-edge tools. Start exploring now!",
-  image: ogImageSrc,
+  title: `${SITE.title}: : Trabajamos junto con el pueblo`,
+  description: "Somos una organización que brinda servicios comunitarios y en beneficio de los más" +
+    " desfavorecidos",
+  image: ogImageSrc
 };

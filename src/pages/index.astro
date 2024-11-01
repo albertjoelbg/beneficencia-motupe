@@ -1,5 +1,4 @@
 ---
-// Import the necessary components
 import MainLayout from "@/layouts/MainLayout.astro";
 import HeroSection from "@components/sections/landing/HeroSection.astro";
 import HeroSectionAlt from "@components/sections/landing/HeroSectionAlt.astro";
@@ -9,8 +8,7 @@ import FeaturesNavs from "@components/sections/features/FeaturesNavs.astro";
 import TestimonialsSection from "@components/sections/testimonials/TestimonialsSection.astro";
 import PricingSection from "@components/sections/pricing/PricingSection.astro";
 import FAQ from "@components/sections/misc/FAQ.astro";
-import AnnouncementBanner from "@components/ui/banners/AnnouncementBanner.astro";
-import heroImage from "@images/hero-image.avif";
+import heroImage from "@images/hero-image.jpg";
 import faqs from "@data/faqs.json";
 import features from "@data/features.json";
 import pricing from "@data/pricing.json";
@@ -20,40 +18,35 @@ import tools from "@images/automated-tools.avif";
 import dashboard from "@images/dashboard-image.avif";
 
 const avatarSrcs: Array<string> = [
-  "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
-  "https://images.unsplash.com/photo-1531927557220-a9e23c1e4794?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
-  "https://images.unsplash.com/photo-1541101767792-f9b2b1c4f127?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&&auto=format&fit=facearea&facepad=3&w=300&h=300&q=80",
-  "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
+  "https://scontent.faqp1-1.fna.fbcdn.net/v/t39.30808-6/459222121_3709749409264399_2374079369401872309_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_ohc=Pgv03KUxISsQ7kNvgENHT5K&_nc_zt=23&_nc_ht=scontent.faqp1-1.fna&_nc_gid=AlJCfFIZ7RiRj_G1fBY9O8e&oh=00_AYCIg-CtEvusC5Q4IOBAFEjV5WrZhyIgD1PZsLdTCQqKOQ&oe=672A940E",
+  "https://scontent.faqp1-1.fna.fbcdn.net/v/t39.30808-6/459274692_3709749365931070_2168615921451429850_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=RjzSy7UVyv4Q7kNvgH7i1cH&_nc_zt=23&_nc_ht=scontent.faqp1-1.fna&_nc_gid=A0Y-Km8ChY_XBvSlwO9W1SZ&oh=00_AYAXpo7i37gBhuTTJBr32Py_jHdCS9EmU5axRYR7i8xiRg&oe=672AA94D",
+  "https://scontent.faqp1-1.fna.fbcdn.net/v/t39.30808-6/459203903_3709749112597762_8042861033280251911_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=3Hj308whWmMQ7kNvgFE3gnL&_nc_zt=23&_nc_ht=scontent.faqp1-1.fna&_nc_gid=A7_fKaCLrelZfrHetFuZyQl&oh=00_AYBurJpqLBrHPnP--IuM64adW1dgdC3KawiH_nlZ-8PIZw&oe=672AA11C",
+  "https://scontent.faqp1-1.fna.fbcdn.net/v/t39.30808-6/459160201_3709749059264434_7406980699048354235_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=-Td-rhOmF4wQ7kNvgFxDetX&_nc_zt=23&_nc_ht=scontent.faqp1-1.fna&_nc_gid=AMlpFO-Nq_MxMFQ4Jun2N_B&oh=00_AYBVfu-ef7y-7dpQ8rMXr64vwdDLWTbmCpoBXwLL-8fh7w&oe=672AB385",
 ];
 ---
 
 <MainLayout>
-  <AnnouncementBanner
-    btnId="dismiss-button"
-    btnTitle="Explore ScrewFast on GitHub"
-    url="https://github.com/mearashadowfax/ScrewFast"
-  />
 
   <HeroSection
-    title=`Equip Your Projects with <span
-        class="text-yellow-500 dark:text-yellow-400">ScrewFast</span>`
-    subTitle="Top-quality hardware tools and expert construction services for every project need."
-    primaryBtn="Start Exploring"
-    primaryBtnURL="/products"
-    secondaryBtn="Contact Sales Team"
+    title=`Sociedad de Beneficencia de <span
+        class="text-yellow-500 dark:text-yellow-400">Motupe</span>`
+    subTitle="Trajamos junto con el pueblo."
+    primaryBtn="Nuestros Servicios"
+    primaryBtnURL="/services"
+    secondaryBtn="Contáctanos"
     secondaryBtnURL="/contact"
     withReview={true}
     avatars={avatarSrcs}
     rating=`<span class="font-bold">4.8</span> / 5`
     starCount={4}
-    reviews=`From Over <span class="font-bold">12.8k</span> Reviews`
+    reviews=`Más de <span class="font-bold">1k</span> Beneficiarios`
     src={heroImage}
-    alt="Stack of ScrewFast product boxes containing assorted hardware tools"
+    alt="Presidente de la Sociedad de Beneficencia de Motupe"
   />
 
   <ClientsSection
-    title="Trusted by Industry Leaders"
-    subTitle="Experience the reliability chosen by industry giants."
+    title="Con el apoyo de líderes de la industria"
+    subTitle="Experiencia y confiabilidad en nuestros servicios."
   />
 
   <FeaturesGeneral
