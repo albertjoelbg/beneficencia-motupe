@@ -4,7 +4,8 @@ import HeroSection from "@components/sections/landing/HeroSection.astro";
 import HeroSectionAlt from "@components/sections/landing/HeroSectionAlt.astro";
 import ClientsSection from "@components/sections/landing/ClientsSection.astro";
 import FeaturesGeneral from "@components/sections/features/FeaturesGeneral.astro";
-import FeaturesNavs from "@components/sections/features/FeaturesNavs.astro";
+import FeaturesNavs1 from "../components/sections/features/FeaturesNavs1.astro";
+import FeaturesNavs2 from "../components/sections/features/FeaturesNavs2.astro";
 import TestimonialsSection from "@components/sections/testimonials/TestimonialsSection.astro";
 import PricingSection from "@components/sections/pricing/PricingSection.astro";
 import FAQ from "@components/sections/misc/FAQ.astro";
@@ -13,9 +14,12 @@ import faqs from "@data/faqs.json";
 import features from "@data/features.json";
 import pricing from "@data/pricing.json";
 import featureImage from "@images/feature-image.jpg";
-import equipos from "@images/equipos.jpeg";
+import equipos from "@images/equipos.jpg";
 import serfin from "@images/serfin.jpg";
 import nichos from "@images/nichos.jpg";
+import comedorInstitucional from "@images/comedor-institucional.jpg";
+import controlMedico from "@images/control-medico.jpg";
+import talleres from "@images/talleres.jpg";
 
 const avatarSrcs: Array<string> = [
   "https://i.ibb.co/y5Xw6vp/avatar4.jpg",
@@ -57,8 +61,8 @@ const avatarSrcs: Array<string> = [
     features={features}
   />
 
-  <FeaturesNavs
-    title=`Nuestros <span class="text-yellow-500 dark:text-yellow-400">Servicios generales</span>`
+  <FeaturesNavs1
+    title=`Nuestros Servicios<span class="text-yellow-500 dark:text-yellow-400"> Generales</span>`
     tabs={[
       {
         heading: "Servicio Funerario Integral",
@@ -87,6 +91,42 @@ const avatarSrcs: Array<string> = [
         svg: "house",
         src: equipos,
         alt: "Gray metal building frame near tower crane during daytime"
+      }
+    ]}
+  />
+
+  <FeaturesNavs2
+    title=`Nuestros Servicios de <span class="text-yellow-500 dark:text-yellow-400">Protección Social</span>`
+    tabs={[
+      {
+        heading: "Comedor Institucional",
+        content:
+          "En momentos difíciles estamos para darte todo el soporte necesario y cumplir con los" +
+          " protocolos todos fúnebres.",
+        svg: "tools",
+        src: comedorInstitucional,
+        alt: "Los beneficiarios reciben sus alimentos diarios es nuestro comedor Institucional Señor" +
+          " de la Misericordia",
+        first: true
+      },
+      {
+        heading: "Controles básicos de salud",
+        content:
+          "Los controles de salud son muy importantes, y nuesta institución son una prioridad" +
+          " examinar y detectar a tiempo posibles riesgos de salud de nuestros beneficiarios",
+        src: controlMedico,
+        svg: "christmas",
+        alt: "A screenshot or graphic representation of the intuitive dashboard",
+        second: true
+      },
+      {
+        heading: "Talleres de Actividades de Desarrollo",
+        content:
+          "Realizamos de manera recurrente talleres que fomente el desarrollo y curiosidad por" +
+          " ciertos oficios.",
+        svg: "house",
+        src: talleres,
+        alt: "Taller de peinados"
       }
     ]}
   />

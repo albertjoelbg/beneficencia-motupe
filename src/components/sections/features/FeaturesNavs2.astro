@@ -2,7 +2,6 @@
 // Import the necessary dependencies
 import TabNav from "@components/ui/blocks/TabNav.astro";
 import TabContent from "@components/ui/blocks/TabContent.astro";
-import Icon from "@components/ui/icons/Icon.astro";
 
 // Define props from Astro
 const { title, tabs } = Astro.props;
@@ -45,9 +44,9 @@ interface Props {
           {
             tabs.map((tab, index) => (
               <TabNav
-                id={`tabs-with-card-item-${index + 1}`}
-                dataTab={`#tabs-with-card-${index + 1}`}
-                aria={`tabs-with-card-${index + 1}`}
+                id={`tabs-with-card-item-${index + 4}`}
+                dataTab={`#tabs-with-card-${index + 4}`}
+                aria={`tabs-with-card-${index + 4}`}
                 heading={tab.heading}
                 content={tab.content}
                 first={tab.first}
@@ -66,8 +65,8 @@ interface Props {
             {
               tabs.map((tab, index) => (
                 <TabContent
-                  id={`tabs-with-card-${index + 1}`}
-                  aria={`tabs-with-card-item-${index + 1}`}
+                  id={`tabs-with-card-${index + 4}`}
+                  aria={`tabs-with-card-item-${index + 4}`}
                   src={tab.src}
                   alt={tab.alt}
                   first={tab.first}
