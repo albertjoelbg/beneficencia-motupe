@@ -36,9 +36,9 @@ const avatarSrcs: Array<string> = [
         class="text-yellow-500 dark:text-yellow-400">Motupe</span>`
     subTitle="Trajamos junto con el pueblo."
     primaryBtn="Nuestros Servicios"
-    primaryBtnURL="/services"
+    primaryBtnURL="/servicios"
     secondaryBtn="Contáctanos"
-    secondaryBtnURL="/contact"
+    secondaryBtnURL="/contacto"
     withReview={true}
     avatars={avatarSrcs}
     rating=`<span class="font-bold">4.8</span> / 5`
@@ -95,6 +95,8 @@ const avatarSrcs: Array<string> = [
     ]}
   />
 
+  <PricingSection pricing={pricing} />
+
   <FeaturesNavs2
     title=`Nuestros Servicios de <span class="text-yellow-500 dark:text-yellow-400">Protección Social</span>`
     tabs={[
@@ -132,49 +134,34 @@ const avatarSrcs: Array<string> = [
   />
 
   <TestimonialsSection
-    title="Fast-Track Your Projects"
-    subTitle="At ScrewFast, we ensure a swift start with instant account setup. Experience the speed of construction redefined."
+    title="Muchos testimonios"
+    subTitle="Son cientos las personas que brindan una opinión positiva sobre nuestros programas."
     ;
     testimonials={[
       {
         content:
-          "ScrewFast dramatically boosted our project efficiency. Setup was instant, and their rapid response times are phenomenal. Truly a game-changer in hardware and construction support!",
-        author: "Samantha Ruiz",
-        role: "Chief Operating Officer | ConstructIt Inc.",
+          "El apoyo que me brindaron fue estupendo, me ayudó mucho a cumplir mis metas.",
+        author: "Juanito Pérez",
+        role: "Estudiante de la IE Señor de los Milagros",
         avatarSrc:
-          "https://images.unsplash.com/photo-1593104547489-5cfb3839a3b5?q=80&w=1453&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80"
-      }
-    ]}
-    statistics={[
-      {
-        count: "70k+",
-        description:
-          "customers equipped — from DIY to major construction firms"
+          "https://i.ibb.co/1JwV9TR/avatar3.jpg"
       },
       {
-        count: "35%",
-        description:
-          "uptick in project efficiency with ScrewFast tools and services"
-      },
-      {
-        count: "15.3%",
-        description:
-          "reduction in maintenance costs reported by long-term clients"
-      },
-      {
-        count: "2x",
-        description: "quicker assembly using innovative fastening solutions"
+        content:
+          "El apoyo que me brindaron fue estupendo, me ayudó mucho a cumplir mis metas.",
+        author: "Juanito Pérez",
+        role: "Estudiante de la IE Señor de los Milagros",
+        avatarSrc:
+          "https://i.ibb.co/1JwV9TR/avatar3.jpg"
       }
     ]}
   />
 
-  <PricingSection pricing={pricing} />
-
-  <FAQ title="Frequently<br />asked questions" faqs={faqs} />
+  <FAQ title="Preguntas frecuentes" faqs={faqs} />
 
   <HeroSectionAlt
-    title="Let's Build Together"
-    subTitle="ScrewFast is an open-source template, meticulously crafted with Astro, Tailwind CSS, and Preline UI frameworks."
-    url="https://github.com/mearashadowfax/ScrewFast"
+    title="Unidos podemos más"
+    subTitle="Puedes convertirte en un colaborador y apoyar a lo más desfavorecidos."
+    url="/contacto"
   />
 </MainLayout>

@@ -1,38 +1,36 @@
 {
-  "title": "Simple, Transparent Pricing",
-  "subTitle": "Boost efficiency with ScrewFast's clear, value-driven plans.",
-  "badge": "Best value",
-  "thirdOption": "Enterprise Solutions?",
-  "btnText": "Get a Custom Quote",
+  "title": "Afíliate a SERFIN",
+  "subTitle": "Obtén todos los beneficios de asegurar a tu familia.",
+  "badge": "Mejor precio",
 
   "starterKit": {
-    "name": "Starter Kit",
-    "description": "Best option for DIY projects",
-    "price": "49",
+    "name": "Paquete individual",
+    "description": "Ideal para personas independientes",
+    "price": "30",
     "cents": ".00",
-    "billingFrequency": "USD / monthly",
+    "billingFrequency": "SOLES / mensual",
     "features": [
-      "Key hardware tools",
-      "Access to guides & tutorials",
-      "Standard support"
+      "Cuotas muy bajas",
+      "Servicio funerario",
+      "Derecho a un nicho"
     ],
-    "purchaseBtnTitle": "Get the Starter Kit",
+    "purchaseBtnTitle": "Obtener paquete individual",
     "purchaseLink": "#"
   },
 
   "professionalToolbox": {
-    "name": "Professional Toolbox",
-    "description": "Best for large scale uses",
-    "price": "89",
+    "name": "Paquete Familiar",
+    "description": "La mejor opción para tu familia",
+    "price": "69",
     "cents": ".00",
-    "billingFrequency": "USD / monthly",
+    "billingFrequency": "SOLES / monthly",
     "features": [
-      "Premium tool selection",
-      "Priority support",
-      "Exclusive content & deals",
-      "Bulk order discounts"
+      "Mayores beneficios",
+      "Servicios funerarios con carroza",
+      "Derecho a 6 nichos",
+      "Aplica a personas no mayores de 60 años"
     ],
-    "purchaseBtnTitle": "Get the Professional Toolbox",
+    "purchaseBtnTitle": "Obtener paquete familiar",
     "purchaseLink": "#"
   }
 }
